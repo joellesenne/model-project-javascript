@@ -1,0 +1,62 @@
+:root {
+	--theme-hue: 256;
+	--theme-saturation: 100%;
+	--theme-hs: var(--theme-hue), var(--theme-saturation);
+}
+
+/* Simple Reset */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+
+  animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+}
+
+/* For rem size */
+html {
+  font-size: 62.5%;
+}
+
+html:focus-within {
+	scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html:focus-within {
+		scroll-behavior: auto;
+	}
+}
+
+/* For width to not include padding and margin */
+
+body {
+	padding: 1em 1em;
+	min-height: 100vh;
+
+	font-family: 'Source Code Pro', monospace;
+	font-weight: 400;
+	font-size: 1.5em;
+	line-height: 1.5;
+	text-rendering: optimizeSpeed;
+	color: hsl(var(--theme-hs), 50%);
+
+	background-color: hsl(var(--theme-hs), 98%);
+
+  box-sizing: border-box;
+}
+
+.container {
+width: min(100% - 2rem, 70rem);
+margin: 0 auto;
+}
+@supports (margin-inline: auto) {
+  .container {
+    margin-inline: auto;
+  }
+}
