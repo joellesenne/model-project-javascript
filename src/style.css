@@ -60,3 +60,10 @@ margin: 0 auto;
     margin-inline: auto;
   }
 }
+
+.header {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

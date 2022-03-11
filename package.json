@@ -4,9 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint . --ext .js,.jsx --ignore-path .gitignore",
+    "lint:fix": "eslint . --ext .js,.jsx --fix --ignore-path .gitignore",
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepare": "husky install",
+	"test": "husky - updated .husky/pre-commit"
+
   },
   "repository": {
     "type": "git",
@@ -23,6 +28,8 @@
   },
   "homepage": "https://github.com/joellesenne/model-project-javascript#readme",
   "devDependencies": {
+    "eslint": "8.10.0",
+    "husky": "7.0.4",
     "vite": "2.8.6"
   }
 }
