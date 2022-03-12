@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/joellesenne/model-project-javascript#readme",
   "devDependencies": {
-    "eslint": "8.10.0",
+    "eslint": "8.11.0",
     "husky": "7.0.4",
     "vite": "2.8.6"
   }
