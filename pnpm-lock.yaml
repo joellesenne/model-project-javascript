@@ -2,13 +2,13 @@ lockfileVersion: 5.3
 
 specifiers:
   eslint: 8.11.0
-  husky: 7.0.4
+  husky: 8.0.1
   next-update: 3.6.0
   vite: 2.8.6
 
 devDependencies:
   eslint: 8.11.0
-  husky: 7.0.4
+  husky: 8.0.1
   next-update: 3.6.0
   vite: 2.8.6
 
@@ -44,6 +44,22 @@ packages:
 
   /@humanwhocodes/object-schema/1.2.1:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
+    dev: true
+
+  /@types/keyv/3.1.4:
+    resolution: {integrity: sha512-BQ5aZNSCpj7D6K2ksrRCTmKRLEpnPvWDiLPfoGyhZ++8YtiK9d/3DBKPJgry359X/P1PfruyYwvnvwFjuEiEIg==}
+    dependencies:
+      '@types/node': 17.0.31
+    dev: true
+
+  /@types/node/17.0.31:
+    resolution: {integrity: sha512-AR0x5HbXGqkEx9CadRH3EBYx/VkiUgZIhP4wvPn/+5KIsgpNoyFaRlVe0Zlx9gRtg8fA06a9tskE2MSN7TcG4Q==}
+    dev: true
+
+  /@types/responselike/1.0.0:
+    resolution: {integrity: sha512-85Y2BjiufFzaMIlvJDvTTB8Fxl2xfLo4HgmHzVBz08w4wDePCTjYw66PdrolO0kzli3yam/YCgRufyo1DdQVTA==}
+    dependencies:
+      '@types/node': 17.0.31
     dev: true
 
   /acorn-jsx/5.3.2_acorn@8.7.0:
@@ -267,6 +283,8 @@ packages:
       parse-github-repo-url: 1.3.0
       ramda: 0.15.1
       update-notifier: 1.0.3
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /chdir-promise/0.4.0:
@@ -277,6 +295,8 @@ packages:
       lazy-ass: 1.5.0
       q: 1.1.2
       spots: 0.4.0
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /check-more-types/2.21.0:
@@ -488,12 +508,22 @@ packages:
 
   /debug/2.2.0:
     resolution: {integrity: sha1-+HBX6ZWxofauaklgZkE3vFbwOdo=}
+    peerDependencies:
+      supports-color: '*'
+    peerDependenciesMeta:
+      supports-color:
+        optional: true
     dependencies:
       ms: 0.7.1
     dev: true
 
   /debug/2.6.8:
     resolution: {integrity: sha1-5zFTHKLt4n0YgiJCfaF4IdaP9Pw=}
+    peerDependencies:
+      supports-color: '*'
+    peerDependenciesMeta:
+      supports-color:
+        optional: true
     dependencies:
       ms: 2.0.0
     dev: true
@@ -1055,6 +1085,8 @@ packages:
     dependencies:
       debug: 2.6.8
       stream-consume: 0.1.1
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /forever-agent/0.6.1:
@@ -1120,6 +1152,8 @@ packages:
       follow-redirects: 0.0.7
       https-proxy-agent: 1.0.0
       mime: 1.6.0
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /glob-parent/6.0.2:
@@ -1151,6 +1185,8 @@ packages:
     resolution: {integrity: sha1-5dDtSvVfw+701WAHdp2YGSvLLso=}
     engines: {node: '>=0.10.0'}
     dependencies:
+      '@types/keyv': 3.1.4
+      '@types/responselike': 1.0.0
       duplexify: 3.7.1
       infinity-agent: 2.0.3
       is-redirect: 1.0.0
@@ -1167,6 +1203,8 @@ packages:
     resolution: {integrity: sha1-X4FjWmHkplifGAVp6k44FoClHzU=}
     engines: {node: '>=0.10.0 <7'}
     dependencies:
+      '@types/keyv': 3.1.4
+      '@types/responselike': 1.0.0
       create-error-class: 3.0.2
       duplexer2: 0.1.4
       is-redirect: 1.0.0
@@ -1251,11 +1289,13 @@ packages:
       agent-base: 2.1.1
       debug: 2.6.8
       extend: 3.0.2
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
-  /husky/7.0.4:
-    resolution: {integrity: sha512-vbaCKN2QLtP/vD4yvs6iz6hBEo6wkSzs8HpRah1Z6aGmF2KW5PdYuAd7uX5a+OyBZHBhd+TFLqgjUgytQr4RvQ==}
-    engines: {node: '>=12'}
+  /husky/8.0.1:
+    resolution: {integrity: sha512-xs7/chUH/CKdOCs7Zy0Aev9e/dKOMZf3K1Az1nar3tzlv0jfqnYtu235bstsWTmXOR0EfINrPa97yy4Lz6RiKw==}
+    engines: {node: '>=14'}
     hasBin: true
     dev: true
 
@@ -1667,6 +1707,8 @@ packages:
       request: 2.74.0
       semver: 5.3.0
       update-notifier: 0.5.0
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /node-status-codes/1.0.0:
@@ -1699,6 +1741,8 @@ packages:
       registry-url: 3.1.0
       user-home: 2.0.0
       verbal-expressions: 0.2.1
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /number-is-nan/1.0.1:
